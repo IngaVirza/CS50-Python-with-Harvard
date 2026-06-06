@@ -1,14 +1,16 @@
 # Ask user for their name
-name = input("What's your name?")
+name1 = input("What's your name?")
 
 #Remove whitespace from str
-name = name.strip()
+name1 = name1.strip()
 
 # Capitalize user's name
-name = name.capitalize()
+name1 = name1.capitalize()
 
 # Capitalize user's name
-name = name.title()
+name1 = name1.title()
 
+# Remove whitespace from str and capitalize user's name short code 
+name = input("What's your name?").strip().title()
 # Say hello to user
 print(f"hello, {name}")
