@@ -7,3 +7,14 @@ def hello(to='world'):
 
 
 main()
+
+
+def main2():
+    x = int(input("What's x?"))
+    print("x squared id", square(x))
+
+
+def square(n):
+    return n ** 2
+
+main2()    
