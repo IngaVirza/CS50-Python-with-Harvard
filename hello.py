@@ -7,5 +7,8 @@ name = name.strip()
 # Capitalize user's name
 name = name.capitalize()
 
+# Capitalize user's name
+name = name.title()
+
 # Say hello to user
 print(f"hello, {name}")
