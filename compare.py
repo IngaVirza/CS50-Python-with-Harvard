@@ -24,3 +24,13 @@ if z < q or z > q:
 else:
     print("z is equal to q")
 
+# better code 
+
+i = int(input("What's i?"))
+r = int(input("What's r?"))
+
+if i != r:
+    print("i is not equal to r")
+
+else:
+    print("i is equal to r")
