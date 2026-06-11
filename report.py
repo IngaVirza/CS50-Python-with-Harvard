@@ -7,12 +7,12 @@ def main():
 def create_report(spacecraft):
     return f""""
 
-    ======== REPORT ===============
+    ======== REPORT ==============
     Name: {spacecraft.get("name", "Unknown")}
     Distance: {spacecraft.get("distance", "Unknown")}
     Orbit: {spacecraft.get("orbit")}
 
-    ===============================
+    ==============================
     """
 
 
