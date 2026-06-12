@@ -26,7 +26,7 @@ else:
 
 # better code 
 
-i = int(input("What's i?"))
+i = int(input("What is i?"))
 r = int(input("What's r?"))
 
 if i != r:
