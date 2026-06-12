@@ -4,20 +4,22 @@ def main():
     print("Welcome to Spelling Bee!")
     print("Your letters are: A I P C R H G")
 
+    for word, points in WORDS.items():
+        print(f"{word} was worth {points} points")
 
-    while len(WORDS) > 0:
-        print(f"{len(WORDS)} words left!")
-        guess = input("Guess a word: ")
+    # while len(WORDS) > 0:
+    #     print(f"{len(WORDS)} words left!")
+    #     guess = input("Guess a word: ")
 
-        # TODO: Check if guess in dictionary
-        if guess == "GRAPHIC":
-            WORDS.clear()
-            print("You've won")
+    #     # TODO: Check if guess in dictionary
+    #     if guess == "GRAPHIC":
+    #         WORDS.clear()
+    #         print("You've won")
 
 
-        if guess in WORDS.keys():
-            points = WORDS.pop(guess)
-            print(f"Good job!  You csore {points} points")
+    #     if guess in WORDS.keys():
+    #         points = WORDS.pop(guess)
+    #         print(f"Good job!  You csore {points} points")
     
 
 main()    
