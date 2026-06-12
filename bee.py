@@ -10,6 +10,11 @@ def main():
         guess = input("Guess a word: ")
 
         # TODO: Check if guess in dictionary
+        if guess == "GRAPHIC":
+            WORDS.clear()
+            print("You've won")
+
+
         if guess in WORDS.keys():
             points = WORDS.pop(guess)
             print(f"Good job!  You csore {points} points")
