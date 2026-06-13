@@ -9,4 +9,6 @@ results.remove("Luigi")
 
 results.insert(0, "Bowser")
 
+results.reverse()
+
 print(results)
