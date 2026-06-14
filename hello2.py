@@ -11,7 +11,7 @@ def get_int():
         else:
             break
 
-    print(f"x is {x}")    
+    return x        
 
 
 main()
