@@ -7,7 +7,7 @@
 #         print(f"{name} is in {house}")
 
 import csv
-students = []
+# students = []
 
 # with open("students.csv") as file:
 #     for line in file:
@@ -32,7 +32,7 @@ students = []
 #     print(f"{student['name']} is in {student['house']}")
 
 
-with open("students.csv") as file:
+# with open("students.csv") as file:
     # for line in file:
     #     name, home = line.rstrip().split(",")
     #     student = {"name": name, "home":home}
@@ -47,10 +47,18 @@ with open("students.csv") as file:
 
 
     
-    reader = csv.DictReader(file)
-    for row in reader:
-            students.append({"name": row["name"], "home": row["home"]})
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#             students.append({"name": row["name"], "home": row["home"]})
 
     
-for student in sorted(students, key=lambda student: student["name"]): 
-    print(f"{student['name']} is from {student['home']}")
+# for student in sorted(students, key=lambda student: student["name"]): 
+#     print(f"{student['name']} is from {student['home']}")
+
+
+name = input("What's your name?")
+home = input("Where's your home?")
+
+with open("students.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name, home])
