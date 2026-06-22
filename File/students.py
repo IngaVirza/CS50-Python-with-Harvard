@@ -32,5 +32,5 @@ with open("students.csv") as file:
 
 
 
-for student in sorted(students, key=lambda, student: student["name"]): 
+for student in sorted(students, key=lambda student: student["name"]): 
     print(f"{student['name']} is in {student['house']}")
