@@ -1,3 +1,4 @@
+
 # with open("students.csv") as file:
 #     for line in file:
 #         # row = line.rstrip().split(",")
@@ -5,7 +6,7 @@
 #         name, house = line.rstrip().split(",")
 #         print(f"{name} is in {house}")
 
-
+import csv
 students = []
 
 # with open("students.csv") as file:
@@ -17,11 +18,11 @@ students = []
 #     print(student)        
 
 
-with open("students.csv") as file:
-    for line in file:
-        name, house = line.rstrip().split(",")
-        student = {"name": name, "house":house}
-        students.append(student)
+# with open("students.csv") as file:
+#     for line in file:
+#         name, house = line.rstrip().split(",")
+#         student = {"name": name, "house":house}
+#         students.append(student)
 
 # def get_name(student):
 #     return student["name"]
@@ -31,6 +32,14 @@ with open("students.csv") as file:
 #     print(f"{student['name']} is in {student['house']}")
 
 
+with open("students.csv") as file:
+    # for line in file:
+    #     name, home = line.rstrip().split(",")
+    #     student = {"name": name, "home":home}
+    #     students.append(student)
+    reader = csv.reader(file)
+    for name, home in reader:
+        students.append({"name": name, "home": home})
 
 for student in sorted(students, key=lambda student: student["name"]): 
-    print(f"{student['name']} is in {student['house']}")
+    print(f"{student['name']} is from {student['home']}")
