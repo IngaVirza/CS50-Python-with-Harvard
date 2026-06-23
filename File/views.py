@@ -9,15 +9,17 @@ def main():
         writer.writeheader()
 
         for row in reader:
-            brightness = calculate_brightness(f"{row['id']}.jpg")
-            writer.writerow(
-                {
-                    "id": row["id"],
-                    "english_title": row["english_title"],
-                    "japanese_title": row["japanese_title"],
-                    "brightness": round(brightness, 2)
-                }
-            )
+            # brightness = calculate_brightness(f"{row['id']}.jpg")
+            # writer.writerow(
+            #     {
+            #         "id": row["id"],
+            #         "english_title": row["english_title"],
+            #         "japanese_title": row["japanese_title"],
+            #         "brightness": round(brightness, 2)
+            #     }
+            # )
+            row["brightness"] = calculate_brightness(f"{row['id']}.jpg")
+            writer.writerow(row)
 
 
 def calculate_brightness(filename):
