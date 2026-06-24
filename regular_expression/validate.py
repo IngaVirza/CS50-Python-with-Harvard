@@ -18,7 +18,7 @@ email = input("What's your email?").strip()
 # 333333333
 
 
-if re.search("@", email):
+if re.search(".+@.+", email):
     print("Valid")
 else:
     print("Invalid")    
