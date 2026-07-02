@@ -16,3 +16,16 @@ print(senior)
 # Junior
 # Middle
 # Senior
+
+
+# remove duplicates using a set
+{'python', 'c++', 'javascript'}
+
+
+languages = ["python", "javascript", "c++", "c++"]
+print(languages)
+unique_languages = set(languages)
+print(unique_languages)
+
+# ['python', 'javascript', 'c++', 'c++']
+# {'python', 'c++', 'javascript'}
