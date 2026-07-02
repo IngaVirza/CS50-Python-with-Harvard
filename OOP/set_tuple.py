@@ -29,3 +29,12 @@ print(unique_languages)
 
 # ['python', 'javascript', 'c++', 'c++']
 # {'python', 'c++', 'javascript'}
+
+
+#ADD & remove
+languages1 = {"python", "JS", "C++"}
+languages1.remove("JS")
+languages1.add("java")
+print(languages1)
+
+# {'C++', 'python', 'java'}
