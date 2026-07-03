@@ -6,6 +6,7 @@ class User:
         self.is_human = True
 
     def say_hello(self):
+        self.age += 1
         print(f"Hello, I'm {self.name}")
 
 
