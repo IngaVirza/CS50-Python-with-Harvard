@@ -1,4 +1,6 @@
 
 file = open('data.txt','r')
-print(file.read())
-file.close()
+try:
+    print(file.read())
+finally:
+    file.close()
