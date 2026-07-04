@@ -17,11 +17,11 @@ class FileOpener:
         self.mode = mode
 
     def __enter__(self):
-        file = open(self.file_path, self.mode)
+        self.file = open(self.file_path, self.mode)
         return file
 
     def __exit__(self):
-        pass
+        self.file.close()
 
 file_opener = FileOpener('data.txt','r')
 
