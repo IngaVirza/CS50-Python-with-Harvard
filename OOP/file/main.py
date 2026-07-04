@@ -8,5 +8,5 @@ file = open('data.txt','r')
 
 # Better
 
-with open('data.txt', 'r'):
+with open('data.txt', 'r') as file:
     print(file.read())
