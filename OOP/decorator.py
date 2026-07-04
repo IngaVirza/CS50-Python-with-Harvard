@@ -1,7 +1,7 @@
 import time
 
 def decorator_timer(func):
-    def wrapper(): 
+    def wrapper(*args, **kwargs): 
         start = time.time()
         func()
         end = time.time()
@@ -10,10 +10,21 @@ def decorator_timer(func):
     return wrapper
 
 @decorator_timer
-def load_file():
+def load_file(seconds):
     print("Loading...")
-    time.sleep
+    time.sleep(2)
+
+
+load_file(0.5)
+load_file(1)    
+
+
 
 # load_file = decorator_timer(load_file)    
+@decorator_timer
+def multiply(a, b):
+    print("Caounting...")
+    time.sleep(1)
+    return a * b
 
-load_file()
+multiply(2, 6)
