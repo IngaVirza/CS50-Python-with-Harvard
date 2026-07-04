@@ -3,9 +3,10 @@ import time
 def decorator_timer(func):
     def wrapper(*args, **kwargs): 
         start = time.time()
-        func()
+        result = func(*args, **kwargs)
         end = time.time()
         print(f"Execution time: {end - start}")
+        return result
 
     return wrapper
 
@@ -27,4 +28,4 @@ def multiply(a, b):
     time.sleep(1)
     return a * b
 
-multiply(2, 6)
+print(multiply(2, 6))
