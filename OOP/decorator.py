@@ -2,9 +2,10 @@ import time
 
 def decorator_timer(func):
     def wrapper(): 
-        print('start')
+        start = time.time()
         func()
-        print('end')
+        end = time.time()
+        print(f"Execution time: {end - start}")
 
     return wrapper
 
