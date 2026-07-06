@@ -27,7 +27,7 @@ def main():
     print(f"This skewer heals {mashroom_skewr.hearts} hearts!")
 
     mashroom_skewr = Food.from_nothing(hearts=2)
-
+    print(f"This skewer heals {mashroom_skewr.hearts} hearts!")
 
 
 main()    
