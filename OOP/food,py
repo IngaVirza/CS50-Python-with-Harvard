@@ -14,11 +14,19 @@ class Food:
                else:  
                 hearts += 1
         return hearts   
+    
+    @classmethod
+    def from_nothing(cls, hearts):
+        food = cls(ingredients= [])
+        food.hearts = hearts
+        return food
 
 
 def main():
     mashroom_skewr = Food(ingredients=["Mushroom", "Hearty Mushroom"])
     print(f"This skewer heals {mashroom_skewr.hearts} hearts!")
+
+
 
 
 
