@@ -12,5 +12,8 @@ def main():
         Package(number=2, sender="Bob", recipient="Charlie", weight=5)
     ]
 
+    for package in packages:
+        print(f"Package {package.number}: {package.sender} to {package.recipient}, {package.weight}kg")
+
 
 main()
