@@ -1,0 +1,20 @@
+class Food:
+    def __init__(self, ingredients):
+        self.ingredients = ingredients
+        self.hearts = Food.calculate_hearts(ingredients)
+
+    @classmethod
+    def calculate_hearts(cls, ingredients):
+        hearts = 1 
+        for ingredient in  ingredients:
+               hearts += 1
+        return hearts   
+
+
+def main():
+    mashroom_skewr = Food(ingredients=["Mushroom", "Hearty Mushroom"])
+    print(f"This skewer heals {mashroom_skewr.hearts} hearts!")
+
+
+
+main()    
