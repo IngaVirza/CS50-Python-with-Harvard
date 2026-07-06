@@ -1,11 +1,13 @@
 class Food:
+    base_hearts = 1
+
     def __init__(self, ingredients):
         self.ingredients = ingredients
         self.hearts = Food.calculate_hearts(ingredients)
 
     @classmethod
     def calculate_hearts(cls, ingredients):
-        hearts = 1 
+        hearts = cls.base_hearts
         for ingredient in  ingredients:
                if "hearty" in ingredient.lower():
                     heart += 2
