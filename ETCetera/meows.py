@@ -15,9 +15,9 @@
 # cat.meow()
 
 
-def meow(n: int):
-    for _ in range(n):
-        print("meow")
+def meow(n: int) -> str:
+    return "meow\n" * n
 
 number: int = int(input("Number: ")   )  
-meow(number)
+meows: str = meow(number)
+print(meows)
