@@ -19,5 +19,5 @@ def meow(n: int):
     for _ in range(n):
         print("meow")
 
-number = input("Number: ")     
+number: int = int(input("Number: ")   )  
 meow(number)
