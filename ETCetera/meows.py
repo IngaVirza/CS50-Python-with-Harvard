@@ -39,7 +39,7 @@
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-n")
+parser.add_argument("-n", help="Number of times to meow")
 args = parser.parse_args()
 
 for _ in range(int(args.n)):
