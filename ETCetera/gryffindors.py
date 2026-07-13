@@ -8,3 +8,6 @@ students = [
 gryffindors = [
     student["name"] for student in students if student ["house"] == "Gryffindor"
 ]
+
+for griffindor in sorted(gryffindors):
+    print(griffindor)
