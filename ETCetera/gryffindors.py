@@ -5,9 +5,17 @@ students = [
     {"name": "Draco", "house": "Gryffindor"},
 ]
 
-gryffindors = [
-    student["name"] for student in students if student ["house"] == "Gryffindor"
-]
+# gryffindors = [
+#     student["name"] for student in students if student ["house"] == "Gryffindor"
+# ]
 
-for griffindor in sorted(gryffindors):
-    print(griffindor)
+# for griffindor in sorted(gryffindors):
+#     print(griffindor)
+
+def is_gryffindor(s):
+    return s ["house"] == "Gryfindor"
+
+gryffindors = filter(is_gryffindor, students)
+
+for gryffindor in sorted (gryffindors, key=lambda s: s["name"]):
+    print(gryffindor["name"])
