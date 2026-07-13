@@ -5,7 +5,7 @@ def main():
 def yell(*words):
     uppercase = []
     for word in words:
-        uppercase.append(word.upper())
+        uppercase.append(str.upper())
     print(*uppercase)    
 
 
